@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog</title>
-</head>
-<body>
-    <div>
-        <h1><a href="/">DG Blog</a></h1>
 
-    </div>
+{% extends 'blog/base.html' %}
+
+{% block content %}
 
     <div>
-        <p>published: date, hour</p>
         <h2><a href="">My first post</a></h2>
-        <p>Lorem...</p>
+        <p>published: date, hour</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aspernatur assumenda blanditiis dolores ex maxime officiis. Ad delectus dicta dolorum et incidunt ipsam, perferendis saepe. Mollitia necessitatibus omnis quibusdam repudiandae?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et impedit, ipsum maxime natus omnis praesentium quae quasi quia rerum.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
     </div>
 
+    {% for post in posts %}
+        <div class="post">
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <div class="date">
+                <p>published: {{ post.published_date }}</p>
+            </div>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
 
-
-<p>Hi there!</p>
-</body>
-</html>
+{% endblock %}
