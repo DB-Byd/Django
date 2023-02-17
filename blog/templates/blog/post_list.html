@@ -5,10 +5,23 @@
 {% block content %}
 
     <div>
-        <h2><a href="">Od autora</a></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aspernatur assumenda blanditiis dolores ex maxime officiis. Ad delectus dicta dolorum et incidunt ipsam, perferendis saepe. Mollitia necessitatibus omnis quibusdam repudiandae?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et impedit, ipsum maxime natus omnis praesentium quae quasi quia rerum.</p>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <h2><a href="">Wprowadzenie</a></h2>
+        <p>
+            Niniejszy przykład blogu zbudowany został w oparciu o tutorial
+            <a href="https://tutorial.djangogirls.org/pl/">Django Girls</a>. To stąd wziął się pomysł publikowania kodu
+            na GitHub-ie i umieszczania rezultatów pracy na <a href="https://pythonanywhere.com">pythonanywhere.com</a>.
+            Na marginesie - teraz wydaje się to oczywiste, ale wcześniej jakoś na to nie wpadłem, albo przynajmniej
+            nie doceniałem wystarczająco tych narzędzi. Zatem dzięki Django Girls!
+        </p>
+        <p>
+            Jak zostało zdradzone na wstępie, do budowy portalu wykorzystwany jest framework Django. W związku z tym
+            treść postów przechowywana jest w bazie danych (aktualnie SQlite), a elementy wyświetlane na stronie
+            generowane są dynamicznie. Posty można wpisywać poprzez panel administracyjny, albo formularz dostępny
+            dla zalogowanych użytkowników. W tym momencie nie ma jednak możliwości zarejestrowania się
+            i testowania tej funkcjonalności - póki co tym przywilejem dysponuje wyłącznie admin. Być może w przyszłości,
+            w ramach testowania nowych funkcjonalności, szkielet blogu zostanie rozbudowany.
+        </p>
+        <br>
     </div>
 
     {% for post in posts %}
