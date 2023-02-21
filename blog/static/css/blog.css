@@ -3,6 +3,8 @@ body {
     background-color: silver;
 }
 
+
+
 h1 a, h2 a {
     color: #C25100;
     font-family: 'Lobster';
@@ -59,3 +61,7 @@ h3, h4 {
 .post h2 a, .post h1 a:visited {
     color: #000000;
 }
+
+.dark{
+            background-color: #222;
+            color: #e6e6e6;
