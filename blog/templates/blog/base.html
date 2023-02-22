@@ -1,6 +1,7 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="pl">
+
+{% load static %}
 
 <head>
     <title>clw.pythonanywhere.com</title>
@@ -28,10 +29,10 @@
                             <a class="nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'post_list' %}">Blog DG</a>
+                            <a class="nav-link" href="{% url 'post_list' %}">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'bs_grid' %}">Bootstrap grid</a>
+                            <a class="nav-link" href="{% url 'bs_grid' %}">Bootstrap</a>
                         </li>
                         <li class="nav-item">
                             {% if user.is_authenticated %}

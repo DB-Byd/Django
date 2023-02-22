@@ -3,27 +3,33 @@
 
 {% block content %}
 
-
     <div>
-        <h2><a href="">Wprowadzenie</a></h2>
+        <h2>Wprowadzenie</h2>
         <p>
             Niniejszy przykład blogu zbudowany został w oparciu o tutorial
-            <a href="https://tutorial.djangogirls.org/pl/">Django Girls</a>. To stąd wziął się pomysł publikowania kodu
-            na GitHub-ie i umieszczania rezultatów pracy na <a href="https://pythonanywhere.com">pythonanywhere.com</a>.
-            Na marginesie - teraz wydaje się to oczywiste, ale wcześniej jakoś na to nie wpadłem, albo przynajmniej
-            nie doceniałem wystarczająco tych narzędzi. Zatem dzięki Django Girls!
+            <a href="https://tutorial.djangogirls.org/pl/">Django Girls</a>. To stamtąd wziął się pomysł publikowania
+            kodu na GitHub-ie i umieszczania publicznie rezultatów pracy
+            na <a href="https://pythonanywhere.com">pythonanywhere.com</a>. Teraz wydaje się to oczywiste, ale
+            wcześniej jakoś na to nie wpadłem, albo przynajmniej nie doceniałem wystarczająco tych narzędzi.
+            Zatem dzięki Django Girls!
         </p>
         <p>
-            Jak zostało zdradzone na wstępie, do budowy portalu wykorzystwany jest framework Django. W związku z tym
-            treść postów przechowywana jest w bazie danych (aktualnie SQlite), a elementy wyświetlane na stronie
-            generowane są dynamicznie. Posty można wpisywać poprzez panel administracyjny, albo formularz dostępny
+            Do budowy portalu wykorzystwany jest framework Django. Treść postów przechowywana jest w bazie danych
+            (aktualnie SQlite), a elementy wyświetlane na stronie generowane są dynamicznie.
+            Posty można wpisywać poprzez panel administracyjny, albo formularz dostępny
             dla zalogowanych użytkowników. W tym momencie nie ma jednak możliwości zarejestrowania się
             i testowania tej funkcjonalności - póki co tym przywilejem dysponuje wyłącznie admin. Być może w przyszłości,
             w ramach testowania nowych funkcjonalności, szkielet blogu zostanie rozbudowany.
         </p>
+        <p>
+            W przykładowych postach umieszczany był tekst "Lorum...". Szybko jednak wpadłem na pomysł, że można w
+            postach opisywać zmiany wprowadzane kolejno na stronie. I tak z testowego szkieletu powstał prawdziwy blog.
+            Nie jest wykluczone, że kiedyś te treści zostaną umieszczone na oficjalnej stronie firmowej jako wskazówki
+            dla kolejnych rzesz początkujących programistów. W sumie wiedzy nigdy nie za wiele!!!
+        </p>
+
         <br>
     </div>
-
 
         {% if user.is_authenticated %}
         <div style="text-align: right;">
